@@ -22,7 +22,7 @@ Download the repository and execute the notebooks.
 
 ![](images/truth.PNG)
 
-- Estimated landmark positions and robot positions. These are calculated using the SLAM approach from only motion and measurement data. SLAM gives us a way to both localize a robot and build up a map of its environment as a robot moves and senses in real-time. 
+- Estimated landmark positions and robot positions. These are calculated using the SLAM approach from only motion and measurement data. SLAM gives us a way to both localize a robot and build up a map of its environment as a robot moves and senses in real-time. Note that both a measurement noise and a motion noise (representing the instruments and machine's precision gauge) are included in all measurements and collected data.
 
 ![](images/estimates.PNG)
 

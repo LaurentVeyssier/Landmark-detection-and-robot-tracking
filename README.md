@@ -20,12 +20,12 @@ Download the repository and execute the notebooks.
 
 - Ground truth of robot positions and landmark localizations
 
-![](truth.PNG)
+![](images/truth.PNG)
 
 - Estimated landmark positions and robot positions. These are calculated using the SLAM approach from only motion and measurement data. SLAM gives us a way to both localize a robot and build up a map of its environment as a robot moves and senses in real-time. 
 
-![](estimates.PNG)
+![](images/estimates.PNG)
 
 - Representation of the "world" mapped by the robot using detection measures as it moves.
 
-![](world.PNG)
+![](images/world.PNG)

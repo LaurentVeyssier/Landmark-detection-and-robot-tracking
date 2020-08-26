@@ -12,6 +12,9 @@ This project is the third project of UDACITY's Computer Vision nanodegree. The p
 - Notebook 2 : Omega and Xi, Constraints
 - Notebook 3 : Landmark Detection and Tracking
 
+Note that a measurement noise and a motion noise (representing the instruments and machine's precision gauge) are included in all sensor measurements and movement data. More noise will affect predictions adversely. The higher motion / measurement noise we have, the higher the difference between predicted and real value of poses of the robot.
+Therefore it makes sense to use 1-over-noise as the confidence or "strength" factor. The higher the noise, the less confident the measurement. Noise plays the role of the standard deviation sigma. More noise will flatten the gaussian probability distribution of the measure (around its exact value).
+
 # Installation
 
 Download the repository and execute the notebooks.
@@ -22,7 +25,7 @@ Download the repository and execute the notebooks.
 
 ![](images/truth.PNG)
 
-- Estimated landmark positions and robot positions. These are calculated using the SLAM approach from only motion and measurement data. SLAM gives us a way to both localize a robot and build up a map of its environment as a robot moves and senses in real-time. Note that both a measurement noise and a motion noise (representing the instruments and machine's precision gauge) are included in all measurements and collected data.
+- Estimated landmark positions and robot positions. These are calculated using the SLAM approach from only motion and measurement data. SLAM gives us a way to both localize a robot and build up a map of its environment as a robot moves and senses in real-time.
 
 ![](images/estimates.PNG)
 

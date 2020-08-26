@@ -88,7 +88,8 @@ class robot:
             dy = landmark[1] - self.y + self.measurement_noise * self.rand()
             
             # Compare distance to robot's measure_range and keep landmark if within distance
-            if np.sqrt(dx**2 + dy**2) <= self.measurement_range:
+            # if np.sqrt(dx**2 + dy**2) <= self.measurement_range:  # USE ABS COMPARISON vs Euclidean distance as per project instructions
+            if abs(dx) <= self.measurement_range and abs(dy) <= self.measurement_range:
                 measurements.append([index, dx, dy])
                 
         ## TODO: iterate through all of the landmarks in a world

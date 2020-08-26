@@ -27,5 +27,7 @@ Download the repository and execute the notebooks.
 ![](images/estimates.PNG)
 
 - Representation of the "world" mapped by the robot using detection measures as it moves.
+  - X are the landmarks
+  - O is the robot
 
 ![](images/world.PNG)

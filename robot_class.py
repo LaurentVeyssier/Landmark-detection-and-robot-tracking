@@ -1,6 +1,7 @@
 from math import *
 import random
 import numpy as np
+import itertools
 
 
 ### ------------------------------------- ###
@@ -120,6 +121,31 @@ class robot:
     def __repr__(self):
         return 'Robot: [x=%.5f y=%.5f]'  % (self.x, self.y)
 
+#### ADDED VARIANT DEFINING THREE SQUARE-SHAPED LANDMARK BLOBS
+    # --------
+    # make_landmarks:
+    # make 3 square-shaped landmark blobs located in the world
+    #
+    
+    def make_landmarks_maze(self):
+        self.landmarks = []
+        landmark_size = int(self.world_size * 0.1)
+        landmarks_pos = [[int(self.world_size * .25), int(self.world_size * .25)],
+                         [int(self.world_size * 2/3), int(self.world_size * .25)],
+                         [int(self.world_size * 0.5), int(self.world_size * .75)]]
+        for landmark in landmarks_pos:
+            (x0,y0) = np.asarray(landmark)
+            for i in range(1,landmark_size,2):
+                self.landmarks.append([x0+i,y0])
+                self.landmarks.append([x0,y0+i])
+                self.landmarks.append([x0+i,y0+landmark_size])
+                self.landmarks.append([x0+landmark_size,y0+i])
+            
+            # for i, j in itertools.product(range(landmark_size), range(landmark_size)):
+            #    self.landmarks.append([x0+i,y0+j])
+                
+        self.num_landmarks = len(self.landmarks)
+        return self.landmarks
 
-
+        
 ####### END robot class #######

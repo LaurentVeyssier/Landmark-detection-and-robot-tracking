@@ -1,5 +1,6 @@
 from math import *
 import random
+import numpy as np
 
 
 ### ------------------------------------- ###

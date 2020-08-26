@@ -31,3 +31,7 @@ Download the repository and execute the notebooks.
   - O is the robot
 
 ![](images/world.PNG)
+
+- Improved detection precision of a fixed landmark pattern with higher number of moves and measurements from the robot (20 measures, 100 measures, 300 measures) to map the environment.
+
+![](images/precision.PNG)
